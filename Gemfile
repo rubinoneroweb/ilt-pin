@@ -23,6 +23,23 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Carrierwave for attachments
+gem 'carrierwave'
+
+# fancybox
+gem 'fancybox2-rails', '~> 0.2.8'
+
+# jquery ui
+gem 'jquery-ui-rails'
+
+
+# Bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
+
+
+# Ranked Model
+gem 'ranked-model'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
