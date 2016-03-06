@@ -12,8 +12,8 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @cat.picture %>
+  <%= image_tag(@cat.picture, :width=>200) if @cat.picture.present? %>
 </p>
 
-<%= link_to 'Edit', edit_cat_path(@cat) %> |
-<%= link_to 'Back', cats_path %>
+<%= link_to 'Modifica', edit_cat_path(@cat) %> |
+<%= link_to 'Torna a lista Categorie', cats_path %>

@@ -13,6 +13,145 @@
  *= require_tree .
  *= require_self
  *= require fancybox
+
+*= require 'masonry/basic'
+*= require 'masonry/centered'
+*= require 'masonry/fluid'
+*= require 'masonry/gutters'
+*= require 'masonry/infinitescroll'
+*= require 'masonry/right-to-left'
+*= require 'masonry/transitions'
+
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700');
+
+$oxygen: 'Oxygen', sans-serif;
+
+body {
+  font-family: $oxygen;
+  font-weight: normal;
+}
+
+td {
+  font-family: $oxygen;
+  font-weight: normal;
+  vertical-align: middle !important;
+}
+
+
+.box-label
+{
+	font-family: $oxygen !important;
+}
+
+
+#masonry-container {
+  background: #FFF;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  clear: both;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.box
+{
+	-webkit-border-radius: 1px !important;
+     -moz-border-radius: 1px !important;
+          border-radius: 1px !important;
+}
+
+.box-image
+{
+	max-width: 300px;
+	max-height: 300px;
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+.col1 { width: 80px; }
+.col2 { width: 180px; }
+.col3 { width: 280px; }
+.col4 { width: 380px; }
+.col5 { width: 480px; }
+
+.col1 img { max-width: 80px; }
+.col2 img { max-width: 180px; }
+.col3 img { max-width: 280px; }
+.col4 img { max-width: 380px; }
+.col5 img { max-width: 480px; }
+
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+
+body
+{
+    overflow: hidden;
+}
+
+#slide-panel {
+    width:300px;
+    
+    padding:10px;
+    background:#eee;
+    margin-left:-300px;
+    float: left;
+    max-width: 300px;
+}
+#opener {
+    float:right;
+    margin:-10px -50px 0px 0px;
+    border-radius:0;
+}
+
+.grid
+{
+	width: 100%;
+    float: left;
+padding-left: 5%;
+}

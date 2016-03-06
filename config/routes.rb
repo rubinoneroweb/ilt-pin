@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :artworks do
+    post :update_row_order, on: :collection
+    collection do
+      get 'catalog'
+    end
+  end
+
+
   resources :cats
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid">
+  <div class="row">
+    <h1>CATALOGO DISEGNI</h1>
+
+  
+</div>
+  <div class="row">
+<div id="slide-panel" class="col-md-1">
+      <a href="#" class="btn btn-danger" id="opener"><i class="glyphicon glyphicon-align-justify"></i></a>
+
+      <ul>
+        <% Cat.all.each do |cat| %>
+        <li>
+          <a href="#" onclick="$('.grid').isotope({ filter: '.cat-<%= cat.id.to_s %>' });"><%= cat.name %></a>
+        </li>
+        <% end %>
+      </ul>
+  </div>
+<div id="masonry-container" class="transitions-enabled centered infinite-scroll col-md-11 clearfix grid">
+
+
+    <% @artworks.each do |artwork| %>
+       <div class="box <%= artwork.cats.map{|c| 'cat-'+c.id.to_s}.join(" ") %>">
+         <%= image_tag(artwork.picture, :class=>"box-image") if artwork.picture.present? %>
+          <p class="box-label"><%= artwork.name %></p>
+        </div>
+        
+    <% end %>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+

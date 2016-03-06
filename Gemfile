@@ -36,6 +36,8 @@ gem 'jquery-ui-rails'
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 
+# Masonry
+gem 'masonry-rails'
 
 # Ranked Model
 gem 'ranked-model'

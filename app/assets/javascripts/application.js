@@ -18,3 +18,36 @@
 //= require turbolinks
 //= require_tree .
 //= require fancybox
+//= require masonry/jquery.masonry
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
+//= require masonry/box-maker
+//= require masonry/jquery.loremimages.min
+//= require isotope/jquery.isotope
+
+
+
+
+
+$('.grid').isotope({
+  // options
+  itemSelector: '.box',
+  //layoutMode: 'fitRows',
+  transitionDuration: '0.8s'
+});
+
+
+$(document).ready(function(){
+    $('#opener').on('click', function() {   
+    var panel = $('#slide-panel');
+    if (panel.hasClass("visible")) {
+       panel.removeClass('visible').animate({'margin-left':'-300px'});
+       $('#content').css({'margin-right':'0px'});
+    } else {panel.addClass('visible').animate({'margin-left':'0px'});
+       $('#content').css({'margin-right':'-300px'});
+    }   
+      return false; 
+    });
+});
