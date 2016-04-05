@@ -27,7 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave'
 
 # fancybox
-gem 'fancybox2-rails', '~> 0.2.8'
+#gem 'fancybox2-rails', '~> 0.2.8'
+gem 'swipebox'
 
 # jquery ui
 gem 'jquery-ui-rails'

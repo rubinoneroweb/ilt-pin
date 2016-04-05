@@ -13,9 +13,12 @@
       <ul>
         <% Cat.all.each do |cat| %>
         <li>
-          <a href="#" onclick="$('.grid').isotope({ filter: '.cat-<%= cat.id.to_s %>' });"><%= cat.name %></a>
+          <a href="#" onclick="$('.grid').isotope({ filter: '.cat-<%= cat.id.to_s %>' });setCategories('.cat-<%= cat.id.to_s %>')"><%= cat.name %></a>
         </li>
         <% end %>
+        <li>
+          <a href="#" onclick="$('.grid').isotope({ filter: '' });noCategories();">Tutte/All</a>
+        </li>
       </ul>
   </div>
 <div id="masonry-container" class="transitions-enabled centered infinite-scroll col-md-11 clearfix grid">
@@ -23,7 +26,9 @@
 
     <% @artworks.each do |artwork| %>
        <div class="box <%= artwork.cats.map{|c| 'cat-'+c.id.to_s}.join(" ") %>">
+       <a class="swipebox" rel="group" href="<%= artwork.picture %>" title="<%= artwork.name %>">
          <%= image_tag(artwork.picture, :class=>"box-image") if artwork.picture.present? %>
+         </a>
           <p class="box-label"><%= artwork.name %></p>
         </div>
         
