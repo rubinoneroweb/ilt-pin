@@ -33,6 +33,8 @@ gem 'swipebox'
 # jquery ui
 gem 'jquery-ui-rails'
 
+# Thin
+gem 'thin'
 
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
