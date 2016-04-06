@@ -37,6 +37,9 @@ gem 'jquery-ui-rails'
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 
+#Jasny Bootstrap
+gem 'jasny-bootstrap-rails'
+
 # Masonry
 gem 'masonry-rails'
 

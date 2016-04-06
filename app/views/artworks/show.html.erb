@@ -1,24 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @artwork.name %>
-</p>
+<h1> <%= @artwork.name %></h1>
 
 <p>
-  <strong>Description:</strong>
+  
   <%= @artwork.description %>
 </p>
-
 <p>
-  <strong>Picture:</strong>
-  <%= @artwork.picture %>
+  <strong>Categorie:</strong>
+  <%= @artwork.cats.map{|c| c.name}.join(", ") %>
 </p>
 
 <p>
-  <strong>Row order:</strong>
-  <%= @artwork.row_order %>
+    <%= image_tag(@artwork.picture, :height=>300) if @artwork.picture.present? %>
 </p>
 
-<%= link_to 'Edit', edit_artwork_path(@artwork) %> |
-<%= link_to 'Back', artworks_path %>
+
+
+<%= link_to 'Modifica', edit_artwork_path(@artwork), :class=>"btn btn-warning" %>
+<%= link_to 'Torna a Elenco Disegni', artworks_path, :class=>"btn btn-primary" %>
+<%= link_to 'Aggiungi Nuovo', new_artwork_path, :class=>"btn btn-info" %>

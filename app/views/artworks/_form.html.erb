@@ -12,15 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "Nome" %><br>
     <%= f.text_field :name, :class=>"form-control" %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label "Descrizione" %><br>
     <%= f.text_area :description, :class=>"form-control" %>
   </div>
   <div class="field">
-    <%= f.label :picture %><br>
+  <h4>Categorie</h4>
+  <%= hidden_field_tag "artwork[cat_ids][]", nil %>
+    <% Cat.all.each do |cat| %>
+    <%= check_box_tag "artwork[cat_ids][]", cat.id, @artwork.cat_ids.include?(cat.id), id: dom_id(cat) %>
+    <%= label_tag dom_id(cat), cat.name%><br>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label "Immagine" %><br>
     <%= f.file_field :picture, :class=>"btn btn-default" %>
   </div>
  

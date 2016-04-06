@@ -21,6 +21,7 @@
 *= require 'masonry/infinitescroll'
 *= require 'masonry/right-to-left'
 *= require 'masonry/transitions'
+*= require jasny-bootstrap.min
 
  */
 @import "bootstrap-sprockets";
@@ -33,6 +34,7 @@ $oxygen: 'Oxygen', sans-serif;
 body {
   font-family: $oxygen;
   font-weight: normal;
+  background-color: #eeeeee;
 }
 
 td {
@@ -64,6 +66,7 @@ td {
 	-webkit-border-radius: 1px !important;
      -moz-border-radius: 1px !important;
           border-radius: 1px !important;
+  box-shadow: 10px 10px 5px #888888;
 }
 
 .box-image
@@ -134,19 +137,35 @@ body
     overflow: hidden;
 }
 
-#slide-panel {
-    width:300px;
-    
-    padding:10px;
-    background:#eee;
-    margin-left:-300px;
-    float: left;
-    max-width: 300px;
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
+  background-color: #99ff00;
+  color:#000000;
 }
-#opener {
-    float:right;
-    margin:-10px -50px 0px 0px;
-    border-radius:0;
+
+.nav > li
+{
+  font-size:16px;
+  border-top: 1px solid #aaaaaa;
+  padding:20px;
+}
+
+@media (min-width: 0) {
+  .navbar-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
+  .navbar {
+    right: auto;
+    background: none;
+    border: none;
+  }
 }
 
 .grid

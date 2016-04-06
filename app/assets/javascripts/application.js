@@ -18,6 +18,7 @@
 //= require swipebox
 //= require turbolinks
 //= require_tree .
+//= require jasny-bootstrap.min
 
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag
@@ -66,7 +67,7 @@ $(document).ready(function(){
 	} );
 });
 
-
+/*
 $(document).ready(function(){
     $('#opener').on('click', function() {   
     var panel = $('#slide-panel');
@@ -78,7 +79,7 @@ $(document).ready(function(){
     }   
       return false; 
     });
-});
+});*/
 
 jQuery(function(){
 

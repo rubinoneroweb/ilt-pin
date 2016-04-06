@@ -21,7 +21,7 @@
         <td><%= image_tag(artwork.picture, :height=>110) if artwork.picture.present? %></td>
         <td><%= artwork.cats.map{|c| c.name}.join(", ") %></td>
         <td><%= link_to 'Dettagli', artwork, :class=>"btn btn-info" %></td>
-        <td><%= link_to 'Modifica', edit_artwork_path(artwork), :class=>"btn btn-warning" %></td>
+        <td><%= link_to 'Modifica/Aggiungi Categorie', edit_artwork_path(artwork), :class=>"btn btn-warning" %></td>
         <td><%= link_to 'Elimina', artwork, method: :delete, data: { confirm: 'Sei sicuro?' },  :class=>"btn btn-danger" %></td>
       </tr>
     <% end %>
