@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "/pages/:page" => "pages#show"
   resources :artworks do
     post :update_row_order, on: :collection
     collection do
@@ -6,9 +7,11 @@ Rails.application.routes.draw do
     end
   end
 
+  
 
   resources :cats
 
+  root "pages#show", page: "home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

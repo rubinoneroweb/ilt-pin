@@ -140,7 +140,7 @@ body
 .navbar-toggle {
   float: left;
   margin-left: 15px;
-  background-color: #99ff00;
+  background-color: #5bc0de;
   color:#000000;
 }
 
@@ -173,4 +173,14 @@ body
 	width: 100%;
     float: left;
 padding-left: 5%;
+}
+
+#swipebox-title
+{
+  font-size:20px !important;
+  font-weight:bold !important;
+}
+#swipebox-overlay
+{
+  background-color: rgba(0, 0, 0, 0.6) !important;
 }

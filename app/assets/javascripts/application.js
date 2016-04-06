@@ -39,9 +39,18 @@ function noCategories () {
 	$(".swipebox").attr("rel", "group");
 }
 
+function toggle_row (cl) {
+	$('tr').show(1, function(){
+		$("tr:not('" + cl + "')").hide();
 
+	});
+	
+}
 
-$('.grid').isotope({
+var $isocontainer = $('.grid');
+
+		// initialize isotope
+		$isocontainer.isotope({
   // options
   itemSelector: '.box',
   //layoutMode: 'fitRows',
@@ -52,13 +61,16 @@ $('.grid').isotope({
 
 $(document).ready(function(){
 
+	
+		
+
 	$( '.swipebox' ).swipebox( {
 		useCSS : true, // false will force the use of jQuery for animations
 		useSVG : true, // false to force the use of png for buttons
 		initialIndexOnArray : 0, // which image index to init when a array is passed
 		hideCloseButtonOnMobile : false, // true will hide the close button on mobile devices
-		removeBarsOnMobile : true, // false will show top bar on mobile devices
-		hideBarsDelay : 3000, // delay before hiding bars on desktop
+		removeBarsOnMobile : false, // false will show top bar on mobile devices
+		hideBarsDelay : 0, // delay before hiding bars on desktop
 		videoMaxWidth : 1140, // videos max width
 		beforeOpen: function() {}, // called before opening
 		afterOpen: null, // called after opening

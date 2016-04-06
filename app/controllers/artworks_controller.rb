@@ -4,7 +4,13 @@ class ArtworksController < ApplicationController
   # GET /artworks
   # GET /artworks.json
   def index
-    @artworks = Artwork.rank(:row_order).all
+    if params[:cat_id]
+      @cat_id=params[:cat_id]
+      @artworks = Cat.find(@cat_id).artworks.rank(:row_order).all
+    else
+      @artworks = Artwork.rank(:row_order).all
+    end
+    
   end
 
 
@@ -85,6 +91,6 @@ def update_row_order
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artwork_params
-      params.require(:artwork).permit(:name, :description, :picture, :row_order, :artwork_id, :row_order_position, {:cat_ids =>[]}) 
+      params.require(:artwork).permit(:name, :description, :picture, :row_order, :cat_id, :artwork_id, :row_order_position, {:cat_ids =>[]}) 
     end
 end
