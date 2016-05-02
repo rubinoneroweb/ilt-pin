@@ -38,7 +38,7 @@
 
     <% @artworks.each do |artwork| %>
        <div class="box <%= artwork.cats.map{|c| 'cat-'+c.id.to_s}.join(" ") %>">
-       <a class="swipebox" rel="group" href="<%= artwork.picture %>" title="<%= artwork.name %>">
+       <a class="swipebox" rel="group" href="<%= artwork.picture %>" title="<%= artwork.name %>" onclick="$('.offcanvas').offcanvas('hide');">
          <%= image_tag(artwork.picture, :class=>"box-image") if artwork.picture.present? %>
          </a>
           <p class="box-label"><%= artwork.name %></p>

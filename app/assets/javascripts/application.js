@@ -68,8 +68,8 @@ $(document).ready(function(){
 		useCSS : true, // false will force the use of jQuery for animations
 		useSVG : true, // false to force the use of png for buttons
 		initialIndexOnArray : 0, // which image index to init when a array is passed
-		hideCloseButtonOnMobile : false, // true will hide the close button on mobile devices
-		removeBarsOnMobile : false, // false will show top bar on mobile devices
+		hideCloseButtonOnMobile : true, // true will hide the close button on mobile devices
+		removeBarsOnMobile : true, // false will show top bar on mobile devices
 		hideBarsDelay : 0, // delay before hiding bars on desktop
 		videoMaxWidth : 1140, // videos max width
 		beforeOpen: function() {}, // called before opening
@@ -101,13 +101,13 @@ jQuery(document.body)
 
 // closes when bg clicked
 
-.on('touchend click','#swipebox-slider .current img', function(){
+.on('click touchstart','#swipebox-slider .current img', function(){
 
 return false;
 
 })
 
-.on('touchend click','#swipebox-slider .current', function(){
+.on('click touchstart','#swipebox-slider .current', function(){
 
 jQuery('#swipebox-close').click();
 
