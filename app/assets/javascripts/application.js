@@ -47,6 +47,20 @@ function toggle_row (cl) {
 	
 }
 
+
+
+function hide_cats () {
+
+	$('.offcanvas').offcanvas('hide');
+	return false;
+
+	
+	
+}
+
+
+
+
 var $isocontainer = $('.grid');
 
 		// initialize isotope
@@ -102,6 +116,8 @@ jQuery(document.body)
 // closes when bg clicked
 
 .on('click touchstart','#swipebox-slider .current img', function(){
+
+alert("toccato");
 
 return false;
 
