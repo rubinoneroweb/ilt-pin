@@ -15,7 +15,7 @@
 //= require jquery_ujs
 //= require jquery-ui/sortable
 //= require jquery-ui/effect-highlight
-//= require swipebox
+// require swipebox
 //= require turbolinks
 //= require_tree .
 //= require jasny-bootstrap.min
@@ -117,9 +117,9 @@ jQuery(document.body)
 
 .on('click touchstart','#swipebox-slider .current img', function(){
 
-alert("toccato");
+//alert("toccato");
 
-return false;
+//return false;
 
 })
 

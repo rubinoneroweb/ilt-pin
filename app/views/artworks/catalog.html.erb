@@ -1,21 +1,21 @@
 <p id="notice"><%= notice %></p>
-<div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
+  <div class="catmenu">
       <h2  href="#"> Categorie</h2><br>
-      <ul class="nav navmenu-nav">
+      <ul class="catlist">
        <% Cat.all.each do |cat| %>
         <li>
-          <a href="#" onclick="$('.grid').isotope({ filter: '.cat-<%= cat.id.to_s %>' });setCategories('.cat-<%= cat.id.to_s %>')"><%= cat.name %></a>
+          <a  class="btn btn-info .btn-lg" href="#" onclick="$('.grid').isotope({ filter: '.cat-<%= cat.id.to_s %>' });setCategories('.cat-<%= cat.id.to_s %>')"><%= cat.name %></a>
         </li>
 
         <% end %>
         <li>
-          <a href="#" onclick="$('.grid').isotope({ filter: '' });noCategories();">Tutte/All</a>
+          <a  class="btn btn-info .btn-lg" href="#" onclick="$('.grid').isotope({ filter: '' });noCategories();">Tutte/All</a>
         </li>
       </ul>
      
     </div>
 
-    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top" style="display:none;">
       <button type="button" class="navbar-toggle btn btn-primary" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body" >
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
