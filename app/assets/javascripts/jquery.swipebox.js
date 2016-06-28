@@ -424,13 +424,13 @@
 						// tap
 						//alert($(this).attr("class"));
 
-
+/*
 						var offset = $(this).offset();
 						alert(endCoords.pageX - offset.left);
 						alert(endCoords.pageY - offset.top);
 						var rectn = $('.current-img').first()[0].getBoundingClientRect();
-						alert(rectn.);
-
+						alert(rectn);
+*/
 						$this.closeSlide();
 
 						if ( ! bars.hasClass( 'visible-bars' ) ) {
