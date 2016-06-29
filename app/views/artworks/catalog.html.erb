@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
   <div class="catmenu">
-      <h2  href="#"> Categorie/Categories</h2><br>
+  <div class="row">
+    <h1 style="text-align:center;">CATALOGO DISEGNI</h1>
+<br>
+ 
+</div>
+      <h4  href="#"> Categorie/Categories</h2><br>
       <ul class="catlist">
        <% Cat.all.each do |cat| %>
         <li>
@@ -25,12 +30,8 @@
       </button>
     </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <h1 style="text-align:center;">CATALOGO DISEGNI</h1>
-<br>
- 
-</div>
+<div class="container-fluid" style="margin-top:205px;">
+  
   <div class="row">
 
 <div id="masonry-container" class="transitions-enabled centered infinite-scroll col-md-11 clearfix grid">
